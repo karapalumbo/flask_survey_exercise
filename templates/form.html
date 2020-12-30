@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Survey {% endblock %}</title>
+  </head>
+
+  <body>
+    <form action="/answer" method="POST">
+      <p>{{ questions }}</p>
+      <input type="radio" id="yes" value="yes" name="answers" />
+      <label for="yes">{{ choices[0] }}</label>
+      <input type="radio" id="no" value="no" name="answers" />
+      <label for="no">{{ choices[1] }}</label>
+      <button type="submit" name="answers">Submit answer</button>
+    </form>
+  </body>
+</html>
